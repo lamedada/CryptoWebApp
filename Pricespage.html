@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PriceChart</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #d6e6f3;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        background-color: #333;
+        color: #b12525;
+        padding: 20px;
+        text-align: center;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .textbox {
+        background-color: #68a2cd;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: calc(50% - 10px);
+        
+    }
+
+    .textbox h2, .textbox p {
+        margin: 0;
+        padding-bottom: 10px;
+    }
+
+    .textbox input[type="text"] {
+        border: 1px solid #6c0d0d;
+        border-radius: 5px;
+        box-sizing: border-box;
+        display: block;
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <script src="Predict.js"></script>
+        <li><a href="Homepage.html">Home</a></li>
+        <li><a href="Cryptopage.html">Cryptocurrencies</a></li>
+        <li><a href="Pricespage.html">Price Chart</a></li> 
+        <li><a href="Newspage.html">News</a></li> 
+        <li><a href="Calenderpage.html">Calender</a></li>  
+        
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Here are the price charts!</h1>
+    <div class="container">
+        <main>
+            <div class="textbox">
+                <h2><div id="price-prediction"></div></h2>  <!-- Prediction Price Function goes here inside textbox -->
+            </div>
+        </main>
+    </div>
+    <p>Content for the second page goes here.</p>
+    <p1>Hello</p1>
+  </main>
+</body>
+</html>
