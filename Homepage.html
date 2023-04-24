@@ -13,12 +13,6 @@
         background-color: #d6e6f3;
     }
 
-    .container {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 20px 0;
-    }
-
     header {
         background-color: #333;
         color: #b12525;
@@ -34,25 +28,50 @@
         margin-bottom: 20px;
     }
 
+    h1 {
+      font-size: 70px;
+      color: #2b86bb;
+      max-width: 1200px;
+    }
+
+    h2 {
+        margin: 0;
+        padding-bottom: 0px;
+        font-size : 35px;
+    }
+    
+    h3 {
+      font-size: 30px;
+      margin: 0;
+    }
+
     .textbox {
-        background-color: #6e8fa8;
+        background-color: #33678f;
         border: 1px solid #000000;
+        color:#0e110e;
         border-radius: 20px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 20px;
-        width: 400px;
+        width: 500px;
         box-sizing: border-box;
         height: 150px;
         display: flex;
         flex-direction: column;
         margin: 0;
         position: absolute;
+        top: 70%;
         left: 2.5%;
     }
+   
+    .textbox p {
+      margin: 6%;
+      font-size: 20px;
+      margin-left: 0%;
+    }
 
-    .textbox h2, .textbox p {
-        margin: 0;
-        padding-bottom: 10px;
+    .textbox2 {
+      left: 120%;
+      top: 0%;
     }
 
     .textbox input[type="text"] {
@@ -64,6 +83,19 @@
         padding: 10px;
         width: 100%;
     }
+
+    .cryptocurrency-image {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2272/2272825.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Set width and height according to your desired dimensions */
+    width: 400px;
+    height: 400px;
+    margin-left: 100px;
+    margin-top: 50px;
+
+}
 </style>
 </head>
 <body>
@@ -80,13 +112,15 @@
   </header>
   <main>
     <h1>The world's first web application with never before seen functions!</h1>
-    <div class="container">
-      <main>
-          <div class="textbox">
+    <div class="cryptocurrency-image"></div>
+    <main>
+          <div class="textbox textbox">
               <h2>Explore Cryptocurrency</h2>
               <p>Click here to start your cryto journey.</p>
+          <div class="textbox textbox2">
+              <h3>Check out all the available functions that our web app provides!</h3>
           </div>
-      </main>
+   </main>
   </div>
   </main>
 </body>

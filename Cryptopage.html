@@ -5,6 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cryptocurrencies</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    header {
+        background-color: #333;
+        color: #b12525;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 70px;
+        color: #2b6281;
+        max-width: 1200px;
+        margin-left: 10px;
+    } 
+
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #d6e6f3;
+    }
+
+    table {
+        width: 1000px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        font-size: 25px;
+        margin-left: 50px;
+        color: rgb(2, 2, 2)
+    }
+
+    th, td {
+        width: auto;
+        height: 50px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        background-color: #7eadd4;
+        font-size: 25px;
+        font-style: italic;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        background-color: #333;
+        color: #ffffff
+    }
+
+    tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+
+    .col-name {
+    width: 2%;
+}
+
+    .col-symbol {
+    width: 3%;
+}
+
+    .col-price {
+    width: 5%;
+}
+
+  </style>
+
+
 </head>
 <body>
   <header>
@@ -19,9 +87,18 @@
     </nav>
   </header>
   <main>
-    <h1>All about crypto</h1>
-    <p>Content for the second page goes here.</p>
-    <p1>Hehe</p1>
+    <h1>Top Largest Cryptocurrencies</h1>
+    <table id="crypto-table">
+      <thead>
+          <tr>
+            <th class="col-name">Name</th>
+            <th class="col-symbol">Symbol</th>
+            <th class="col-price">Price (USD)</th>
+          </tr>
+      </thead>
+      <tbody></tbody>
+  </table>
+  <script src="scripts.js"></script>
   </main>
 </body>
 </html>
