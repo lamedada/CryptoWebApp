@@ -1,51 +1,31 @@
-const API_KEY = 'your-api-key';
-const API_URL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h`;
+/*To retrieve the Price List of Cryptocurrencies using CoinGecko's API. */
+$(document).ready(function () {
+    const apiKey = '4ec3cee0e4mshac3bebf570c725cp1f0774jsn5762af6f34b3';
+    const cryptoList = ['bitcoin', 'ethereum', 'cardano', 'ripple', 'solana', 'binancecoin', 'polygon', 'polkadot', 'litecoin'];
+    const apiUrl = 'https://coingecko.p.rapidapi.com/simple/price?ids=' + cryptoList.join(',') + '&vs_currencies=usd';
 
-async function fetchTopCryptos() {
-    try {
-        const response = await fetch(API_URL, {
-            headers: {
-                'X-RapidAPI-Key': API_KEY,
-                'X-RapidAPI-Host': 'coingecko.p.rapidapi.com'
+    $.ajax({
+        url: apiUrl,
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Host': 'coingecko.p.rapidapi.com',
+            'X-RapidAPI-Key': apiKey
+        },
+        success: function (response) {
+            let tableBody = $('#crypto-table tbody');
+            for (const crypto in response) {
+                const name = crypto.charAt(0).toUpperCase() + crypto.slice(1);
+                const symbol = crypto.slice(0, 3).toUpperCase();
+                const price = response[crypto].usd;
+
+                tableBody.append(`
+                    <tr>
+                        <td>${name}</td>
+                        <td>${symbol}</td>
+                        <td>$${price.toFixed(2)}</td>
+                    </tr>
+                `);
             }
-        });
-
-        if (!response.ok) {
-            throw new Error('Error fetching data');
         }
-
-        const data = await response.json();
-        displayCryptos(data);
-    } catch (error) {
-        console.error('Error:', error);
-    }
-}
-
-function displayCryptos(cryptos) {
-    const tableBody = document.getElementById('crypto-table-body');
-
-    cryptos.forEach((crypto, index) => {
-        const row = document.createElement('tr');
-
-        const rankCell = document.createElement('td');
-        rankCell.textContent = index + 1;
-        row.appendChild(rankCell);
-
-        const nameCell = document.createElement('td');
-        nameCell.textContent = crypto.name;
-        row.appendChild(nameCell);
-
-        const symbolCell = document.createElement('td');
-        symbolCell.textContent = crypto.symbol.toUpperCase();
-        row.appendChild(symbolCell);
-
-        const priceCell = document.createElement('td');
-        priceCell.textContent = '$' + crypto.current_price.toFixed(2);
-        row.appendChild(priceCell);
-
-        const marketCapCell = document.createElement('td');
-        marketCapCell.textContent = '$' + crypto.market_cap.toLocaleString
-        tableBody.appendChild(row);
-        }   
-    );
-}
+    });
+});

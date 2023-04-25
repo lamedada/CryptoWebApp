@@ -6,6 +6,7 @@
   <title>Cryptocurrencies</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
   <style>
     header {
         background-color: #333;
@@ -18,7 +19,9 @@
         font-size: 70px;
         color: #2b6281;
         max-width: 1200px;
-        margin-left: 10px;
+        position: absolute;
+        margin-left: 70px;
+        top: 50px;
     } 
 
     body {
@@ -28,12 +31,14 @@
     }
 
     table {
+        color: rgb(2, 2, 2);
         width: 1000px;
         margin: 0 auto;
         border-collapse: collapse;
         font-size: 25px;
-        margin-left: 50px;
-        color: rgb(2, 2, 2)
+        position: absolute;
+        margin-left: 80px;
+        top: 250px;
     }
 
     th, td {
@@ -70,6 +75,16 @@
     width: 5%;
 }
 
+    .globalMarketCapText {
+      font-family: Arial, sans-serif;
+      font-size: 24px; 
+      font-weight: bold; 
+      color: #333;
+      position: absolute;
+      top: 180px;
+      left: 110px;
+}
+
   </style>
 
 
@@ -87,7 +102,8 @@
     </nav>
   </header>
   <main>
-    <h1>Top Largest Cryptocurrencies</h1>
+    <h1>Today's Cryptocurrencies Prices</h1>
+    <div id="globalMarketCap" class="globalMarketCapText"></div>
     <table id="crypto-table">
       <thead>
           <tr>
@@ -99,6 +115,7 @@
       <tbody></tbody>
   </table>
   <script src="scripts.js"></script>
+  <script src="script2.js"></script>
   </main>
 </body>
 </html>
