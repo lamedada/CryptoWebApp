@@ -5,12 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PriceChart</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         background-color: #d6e6f3;
+    }
+
+    ul li a {
+    color: #369939;
+    text-decoration: none;
+    }
+
+    h1 {
+      font-size: 50px;
+        color: #2b6281;
+        max-width: 1600px;
+        position: absolute;
+        margin-left: 70px;
+        top: 50px;
+    }
+
+    h2 {
+      font-size: 30px;
+      color: #448bb4;
+      max-width: 1000px;
+      position: absolute;
+      margin-left: 70px;
+      top: 150px;
+    }
+
+    h3 {
+      font-size: 12px;
+      color: #011d2e;
+      max-width: 1200px;
+      position: absolute;
+      margin-left: 70px;
+      top: 200px;
     }
 
     .container {
@@ -34,30 +68,55 @@
         margin-bottom: 20px;
     }
 
-    .textbox {
-        background-color: #68a2cd;
-        border: 1px solid #000000;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        width: calc(50% - 10px);
-        
+    table {
+        color: rgb(2, 2, 2);
+        width: 800px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        font-size: 25px;
+        position: absolute;
+        margin-left: 70px;
+        top: 240px;
     }
 
-    .textbox h2, .textbox p {
-        margin: 0;
-        padding-bottom: 10px;
+    th, td {
+        width: auto;
+        height: 50px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        background-color: #7eadd4;
+        font-size: 25px;
+        font-style: italic;
     }
 
-    .textbox input[type="text"] {
-        border: 1px solid #6c0d0d;
-        border-radius: 5px;
-        box-sizing: border-box;
-        display: block;
-        margin-top: 10px;
-        padding: 10px;
-        width: 100%;
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        background-color: #333;
+        color: #ffffff
     }
+
+    tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+
+    .col-name {
+      width: 10%;
+    }
+
+    .col-price {
+      width: 10%;
+    }
+
+    .col-percentageChange30d {
+      width: 10%;
+    }
+
+    .col-price-prediction {
+      width: 18%;
+    }
+
 </style>
 </head>
 <body>
@@ -75,16 +134,22 @@
     </nav>
   </header>
   <main>
-    <h1>Here are the price charts!</h1>
-    <div class="container">
-        <main>
-            <div class="textbox">
-                <h2><div id="price-prediction"></div></h2>  <!-- Prediction Price Function goes here inside textbox -->
-            </div>
-        </main>
-    </div>
-    <p>Content for the second page goes here.</p>
-    <p1>Hello</p1>
+    <h1>Indicative Predicted Prices of Cryptocurrencies.</h1>
+    <h2>The predicted prices shown below are based on a 30-day range.</h2>
+    <h3>*Attention. Indicated future price are only for technical analysis purposes. It does not ensure accuracy, completeness and effectiveness of information, and accepts no liability for any loss of investor's use.</h3>
+    <div id="price-predictions"></div>
+    <table id="crypto-tables">
+      <thead>
+        <tr>
+          <th class="col-name">Name</th>
+          <th class="col-price">Price (USD)</th>
+          <th class="col-percentageChange30d">30d Change</th>
+          <th class="col-price-prediction">Predicted Price (USD)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="script3.js"></script>
   </main>
 </body>
 </html>

@@ -23,10 +23,9 @@ $(document).ready(function () {
                 tableBody.append(`
                     <tr>
                         <td>${name}</td>
-                        <td>${symbol}</td>
                         <td>$${price.toFixed(2)}</td>
+                        
                         <td>${percentageChange30d.toFixed(2)}%</td>
-                        <td>$${marketCap.toLocaleString()}</td>
                     </tr>
                 `);
             });
