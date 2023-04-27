@@ -1,4 +1,4 @@
-/*To retrieve the Price List of Cryptocurrencies using CoinGecko's API. */
+/*To retrieve the data of Cryptocurrencies using CoinGecko's API. */
 $(document).ready(function () {
     const apiKey = '4ec3cee0e4mshac3bebf570c725cp1f0774jsn5762af6f34b3';
     const cryptoList = ['bitcoin', 'ethereum', 'cardano', 'ripple', 'solana', 'binancecoin', 'polygon', 'polkadot', 'litecoin'];
