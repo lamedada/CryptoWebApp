@@ -5,6 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News Article</title>
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #d6e6f3;
+        
+    }
+
+      ul li a {
+        color: #369939;
+        text-decoration: none;
+    }
+
+      header {
+        background-color: #333;
+        color: #b12525;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 60px;
+        color: #2b6281;
+        position:absolute;
+        top: 50px;
+        margin-left: 50px;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: #2d7ead;
+        position:absolute;
+        top: 200px;
+        margin-left: 50px;
+    }
+
+      #news-widget-container {
+      background-color: rgb(96, 179, 185);
+      padding: 1rem;
+      border-radius: 1px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      width: 1700px;
+      top: 250px;
+      margin-left: 50px;
+    }
+
+  </style>
+
+
 </head>
 <body>
   <header>
@@ -19,9 +73,12 @@
     </nav>
   </header>
   <main>
-    <h1>Daily news!</h1>
-    <p>Content for the second page goes here.</p>
-    <p1>Hello</p1>
+    <h1>News Articles Section</h1>
+    <h2>This page contains all the latest news that may impact the cryptocurrency market.</h2>
+    <div id="news-widget-container">
+    <rssapp-wall id="tmbbvxelRAzrJsEl"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+    <iframe width="1000" height="1600" src="https://rss.app/embed/v1/wall/tmbbvxelRAzrJsEl" frameborder="0"></iframe>
   </main>
+  <script src="script5.js"></script>
 </body>
 </html>
