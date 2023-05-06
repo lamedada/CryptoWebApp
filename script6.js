@@ -1,5 +1,5 @@
 const apiBaseUrl = 'https://api.coindar.org/v2';
-const apiKey = 'YOUR_API_KEY'; // Replace with your API key from Coindar
+const apiKey = 'YOUR_API_KEY'; // API-key will be inserted here
 
 const app = new Vue({
   el: '#app',
